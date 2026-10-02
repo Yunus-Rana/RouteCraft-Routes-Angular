@@ -1,0 +1,65 @@
+<section class="home-page">
+  <div class="hero-copy">
+    <p class="eyebrow"><span class="eyebrow-line"></span> ANGULAR ROUTER · PRACTICE 01</p>
+    <h1>Make every page<br />feel <span>connected.</span></h1>
+    <p class="hero-description">
+      A small playground for exploring nested routes. Start with the overview,
+      then step into a user space with its own profile and settings pages.
+    </p>
+    <a class="primary-link" routerLink="/user">
+      Explore the user space <span aria-hidden="true">↗</span>
+    </a>
+    <div class="route-hint">
+      <span class="hint-icon">⌘</span>
+      <span>Try <code>/user/profile</code> or <code>/user/setting</code></span>
+    </div>
+  </div>
+
+  <aside class="route-card" aria-label="Route map">
+    <div class="route-card-heading">
+      <div>
+        <p class="card-overline">YOUR ROUTE MAP</p>
+        <h2>One parent, two children.</h2>
+      </div>
+      <span class="map-icon">↳</span>
+    </div>
+    <div class="route-tree">
+      <div class="route-row root-route">
+        <span class="route-node"></span>
+        <div><strong>/</strong><span>Overview</span></div>
+        <span class="route-tag">HOME</span>
+      </div>
+      <div class="route-branch">
+        <div class="route-row parent-route">
+          <span class="route-node"></span>
+          <div><strong>/user</strong><span>User space</span></div>
+          <span class="route-tag">PARENT</span>
+        </div>
+        <div class="route-row child-route">
+          <span class="route-node"></span>
+          <div><strong>/user/profile</strong><span>Personal details</span></div>
+        </div>
+        <div class="route-row child-route">
+          <span class="route-node"></span>
+          <div><strong>/user/setting</strong><span>Preferences</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="route-card-footer"><span class="status-dot"></span> Child pages render inside the user layout</div>
+  </aside>
+
+  <div class="feature-strip">
+    <article class="feature">
+      <span class="feature-number">01</span>
+      <div><h3>Shared layout</h3><p>The user section stays in place while its child route changes.</p></div>
+    </article>
+    <article class="feature">
+      <span class="feature-number">02</span>
+      <div><h3>Clear destinations</h3><p>Each nested URL has a focused page and a direct navigation link.</p></div>
+    </article>
+    <article class="feature">
+      <span class="feature-number">03</span>
+      <div><h3>Easy to explore</h3><p>Use the tabs or type a route into the address bar.</p></div>
+    </article>
+  </div>
+</section>

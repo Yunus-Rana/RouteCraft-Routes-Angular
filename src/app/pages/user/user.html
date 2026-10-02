@@ -1,0 +1,33 @@
+<section class="user-page">
+  <div class="user-heading">
+    <div>
+      <p class="section-kicker">USER SPACE <span>/</span> ACCOUNT</p>
+      <h1>Your account, <span>your way.</span></h1>
+      <p class="user-intro">Manage your profile and preferences from one place.</p>
+    </div>
+    <div class="avatar" aria-label="Alex Morgan">AM</div>
+  </div>
+
+  <div class="user-layout">
+    <aside class="user-sidebar">
+      <div class="sidebar-user">
+        <div class="sidebar-avatar">AM</div>
+        <div><strong>Alex Morgan</strong><span>alex.morgan@example.com</span></div>
+      </div>
+      <p class="sidebar-label">ACCOUNT</p>
+      <nav class="user-nav" aria-label="User account pages">
+        <a routerLink="profile" routerLinkActive="is-active">
+          <span class="nav-icon">◎</span> Profile <span class="nav-arrow">›</span>
+        </a>
+        <a routerLink="setting" routerLinkActive="is-active">
+          <span class="nav-icon">⚙</span> Settings <span class="nav-arrow">›</span>
+        </a>
+      </nav>
+      <div class="sidebar-footnote"><span class="status-dot"></span> Your account is up to date</div>
+    </aside>
+
+    <div class="child-route">
+      <router-outlet />
+    </div>
+  </div>
+</section>
