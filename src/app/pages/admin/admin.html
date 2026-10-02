@@ -1,0 +1,88 @@
+<section class="admin-page">
+  <header class="admin-heading">
+    <div>
+      <p class="section-kicker">ROUTECRAFT <span>/</span> ADMIN</p>
+      <h1>Route <span>control room.</span></h1>
+      <p class="admin-intro">A static overview of the routes that make up this routing playground.</p>
+    </div>
+    <span class="admin-badge"><span class="status-dot"></span> Practice environment</span>
+  </header>
+
+  <section class="stats-grid" aria-label="Route summary">
+    <article class="stat-card">
+      <span class="stat-icon route-icon">↳</span>
+      <div><p class="stat-label">REGISTERED ROUTES</p><strong>5</strong><span class="stat-note">Across 3 route levels</span></div>
+    </article>
+    <article class="stat-card">
+      <span class="stat-icon lazy-icon">⌁</span>
+      <div><p class="stat-label">LAZY-LOADED PAGES</p><strong>3</strong><span class="stat-note">Loaded when you navigate</span></div>
+    </article>
+    <article class="stat-card">
+      <span class="stat-icon active-icon">●</span>
+      <div><p class="stat-label">CURRENT SECTION</p><strong>Admin</strong><span class="stat-note">Standalone page route</span></div>
+    </article>
+  </section>
+
+  <div class="admin-content">
+    <section class="panel route-panel">
+      <div class="panel-heading">
+        <div>
+          <p class="card-overline">ROUTE DIRECTORY</p>
+          <h2>Pages in this playground</h2>
+        </div>
+        <span class="static-label">STATIC DATA</span>
+      </div>
+
+      <div class="route-list">
+        <a class="route-item" routerLink="/">
+          <span class="route-symbol home-symbol">⌂</span>
+          <span class="route-details"><strong>Overview</strong><small>Project landing page</small></span>
+          <code>/</code>
+          <span class="route-type">EAGER</span>
+          <span class="route-arrow" aria-hidden="true">↗</span>
+        </a>
+        <a class="route-item" routerLink="/user">
+          <span class="route-symbol parent-symbol">◎</span>
+          <span class="route-details"><strong>User space</strong><small>Parent route with child pages</small></span>
+          <code>/user</code>
+          <span class="route-type lazy-type">LAZY</span>
+          <span class="route-arrow" aria-hidden="true">↗</span>
+        </a>
+        <div class="route-item child-item">
+          <span class="route-symbol child-symbol">↳</span>
+          <span class="route-details"><strong>Profile</strong><small>Default child destination</small></span>
+          <code>/user/profile</code>
+          <span class="route-type">CHILD</span>
+          <span class="route-arrow" aria-hidden="true">·</span>
+        </div>
+        <div class="route-item child-item">
+          <span class="route-symbol child-symbol">↳</span>
+          <span class="route-details"><strong>Settings</strong><small>Lazy-loaded child page</small></span>
+          <code>/user/setting</code>
+          <span class="route-type lazy-type">LAZY</span>
+          <span class="route-arrow" aria-hidden="true">·</span>
+        </div>
+        <div class="route-item current-route" aria-current="page">
+          <span class="route-symbol admin-symbol">⚙</span>
+          <span class="route-details"><strong>Admin panel</strong><small>You are viewing this route</small></span>
+          <code>/admin</code>
+          <span class="route-type lazy-type">LAZY</span>
+          <span class="current-indicator">CURRENT</span>
+        </div>
+      </div>
+      <p class="panel-footnote"><span class="status-dot"></span> Route details are illustrative and are not connected to a backend.</p>
+    </section>
+
+    <aside class="panel learning-panel">
+      <div class="learning-mark">⌘</div>
+      <p class="card-overline">ROUTING NOTE</p>
+      <h2>Load pages on demand.</h2>
+      <p class="learning-copy">The admin page is loaded with <code>loadComponent</code>, so its code is requested when you visit <code>/admin</code>.</p>
+      <div class="code-example">
+        <span>app.routes.ts</span>
+        <code>loadComponent: () =&gt;<br />&nbsp;&nbsp;import('./pages/admin/admin')</code>
+      </div>
+      <a class="text-link" routerLink="/">Back to overview <span aria-hidden="true">↗</span></a>
+    </aside>
+  </div>
+</section>

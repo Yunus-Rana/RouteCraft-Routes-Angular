@@ -6,11 +6,14 @@ import { Setting } from './setting/setting';
 
 export const routes: Routes = [
     {path:'', component:Home},
-    {path:'user', component:User,
+    {path:'admin',
+        loadComponent:()=>import("./pages/admin/admin").then((c)=>c.Admin)},
+    {path:'user', 
+        loadComponent:()=>import("./pages/user/user").then((c)=>c.User),
         children:[
             {path:"", redirectTo:"profile", pathMatch:"full"},
             {path:'profile', component:Profile},
-            {path:'setting', component:Setting}
+            {path:'setting', loadComponent:()=>import("./setting/setting").then((c)=>c.Setting),}
         ]
     },
 ];
