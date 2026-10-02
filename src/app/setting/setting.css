@@ -1,0 +1,151 @@
+:host {
+  display: block;
+}
+
+.panel-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.panel-kicker {
+  margin: 0 0 8px;
+  color: var(--accent);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+}
+
+.panel-heading h2 {
+  margin: 0;
+  color: var(--ink);
+  font-size: 24px;
+  letter-spacing: -0.05em;
+}
+
+.panel-description {
+  margin: 7px 0 0;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.settings-icon {
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  border-radius: 9px;
+  color: #477464;
+  background: #edf6f1;
+  font-size: 15px;
+}
+
+.settings-group {
+  margin-top: 24px;
+}
+
+.group-heading {
+  margin-bottom: 9px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.group-icon {
+  width: 25px;
+  height: 25px;
+  display: grid;
+  place-items: center;
+  border-radius: 7px;
+  color: #477464;
+  background: #edf6f1;
+  font-size: 13px;
+}
+
+.group-heading h3 {
+  margin: 0 0 3px;
+  color: var(--ink);
+  font-size: 11px;
+}
+
+.group-heading p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 9px;
+}
+
+.setting-row {
+  min-height: 55px;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  border-bottom: 1px solid var(--line);
+}
+
+.setting-row > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.setting-row strong {
+  color: var(--ink);
+  font-size: 10px;
+  font-weight: 650;
+}
+
+.setting-row div span {
+  color: var(--muted);
+  font-size: 9px;
+}
+
+.setting-state {
+  min-width: 47px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #398268;
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.setting-state i {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #55b58b;
+}
+
+.preference-chip {
+  min-width: 76px;
+  padding: 7px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  color: var(--ink);
+  font-size: 9px;
+}
+
+.preference-chip span {
+  margin-left: 8px;
+  color: var(--muted);
+}
+
+.settings-footnote {
+  margin: 20px 0 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 9px;
+}
+
+.settings-footnote .status-dot {
+  width: 6px;
+  height: 6px;
+}

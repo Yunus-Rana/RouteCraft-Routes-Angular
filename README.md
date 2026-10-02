@@ -1,59 +1,70 @@
-# Angular1
+# Routecraft — Angular Nested Routes Playground
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.1.8.
+A small Angular app for practicing **nested routing**. It has an overview page and a user area with Profile and Settings child pages. The user navigation stays visible while you move between its child routes.
 
-## Development server
+The pages use static sample content and CSS for the interface. Profile editing, settings controls, and data persistence are not implemented.
 
-To start a local development server, run:
+## Routes
 
-```bash
-ng serve
-```
+| URL | Page | What it demonstrates |
+| --- | --- | --- |
+| `/` | Overview | Route map and links into the user area |
+| `/user` | User space | Redirects to `/user/profile` |
+| `/user/profile` | Profile | A child page rendered inside the user layout |
+| `/user/setting` | Settings | Another child page rendered inside the user layout |
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+The route definitions are in [`src/app/app.routes.ts`](src/app/app.routes.ts). The `User` component contains a nested `<router-outlet>` where its child route is displayed.
 
-## Code scaffolding
+## Getting started
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+### Requirements
 
-```bash
-ng generate component component-name
-```
+- Node.js and npm
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
+### Install and run
 
 ```bash
-ng build
+npm install
+npm start
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Open [http://localhost:4200](http://localhost:4200). The development server reloads the app when source files change.
 
-## Running unit tests
+## Useful commands
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+| Command | Description |
+| --- | --- |
+| `npm start` | Start the local development server |
+| `npm run build` | Create a production build in `dist/` |
+| `npm test` | Run unit tests |
 
-```bash
-ng test
+## Project structure
+
+```text
+src/
+├── app/
+│   ├── pages/
+│   │   ├── home/       # Overview route
+│   │   └── user/       # Parent user route and child outlet
+│   ├── profile/        # /user/profile child route
+│   ├── setting/        # /user/setting child route
+│   ├── app.routes.ts   # Route configuration
+│   ├── app.html        # Shared application shell
+│   └── app.css
+└── styles.css          # Global styles and design tokens
 ```
 
-## Running end-to-end tests
+## Learning goals
 
-For end-to-end (e2e) testing, run:
+- Configure parent and child routes with Angular Router.
+- Render child pages using a nested `<router-outlet>`.
+- Navigate between routes with `routerLink`.
+- Highlight the active destination with `routerLinkActive`.
+- Redirect a parent route to its default child route.
 
-```bash
-ng e2e
-```
+## Built with
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- Angular
+- TypeScript
+- Angular Router
+- CSS
